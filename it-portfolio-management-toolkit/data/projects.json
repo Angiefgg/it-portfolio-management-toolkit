@@ -1,0 +1,56 @@
+[
+  {
+    "id": "P-001",
+    "name": "Customer Identity Modernization",
+    "owner": "Platform Team",
+    "status": "On Track",
+    "progress": 72,
+    "risk": "Medium",
+    "plannedEnd": "2027-02-28"
+  },
+  {
+    "id": "P-002",
+    "name": "Data Quality Enablement",
+    "owner": "Data Team",
+    "status": "At Risk",
+    "progress": 48,
+    "risk": "High",
+    "plannedEnd": "2027-01-31"
+  },
+  {
+    "id": "P-003",
+    "name": "Service Desk Automation",
+    "owner": "Operations",
+    "status": "On Track",
+    "progress": 91,
+    "risk": "Low",
+    "plannedEnd": "2026-12-15"
+  },
+  {
+    "id": "P-004",
+    "name": "Digital Onboarding MVP",
+    "owner": "Digital Team",
+    "status": "Blocked",
+    "progress": 35,
+    "risk": "High",
+    "plannedEnd": "2027-03-15"
+  },
+  {
+    "id": "P-005",
+    "name": "Reporting Platform Upgrade",
+    "owner": "BI Team",
+    "status": "On Track",
+    "progress": 64,
+    "risk": "Low",
+    "plannedEnd": "2027-01-20"
+  },
+  {
+    "id": "P-006",
+    "name": "Workflow Optimization",
+    "owner": "Automation Team",
+    "status": "At Risk",
+    "progress": 57,
+    "risk": "Medium",
+    "plannedEnd": "2027-02-10"
+  }
+]

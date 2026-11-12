@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IT Portfolio Overview</title><style>
+body{font-family:Arial,sans-serif;background:#f4f6fa;color:#172033;margin:0;padding:28px}
+main,header,footer{max-width:1050px;margin:20px auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.card{background:white;border:1px solid #e5e9f0;border-radius:12px;padding:18px}.muted{color:#667085;font-size:13px}
+.metric{font-size:30px;font-weight:bold;margin-top:8px}table{width:100%;border-collapse:collapse;margin-top:12px}
+th,td{text-align:left;padding:12px;border-bottom:1px solid #edf0f5;font-size:14px}.bar{height:7px;background:#edf0f5;border-radius:8px}.bar span{display:block;height:100%;background:#4263eb}
+.pill{padding:4px 8px;border-radius:14px;background:#eef2ff;font-size:12px}.warn{background:#fff1d6}.bad{background:#fee4e2}
+</style></head><body><header><h1>IT Portfolio Overview</h1><div class="muted">Illustrative portfolio · Fictional data · Governance demo</div></header>
+<main><section class="grid" id="metrics"></section><section class="card" style="margin-top:16px"><h2>Initiative delivery</h2>
+<table><thead><tr><th>Initiative</th><th>Owner</th><th>Status</th><th>Progress</th><th>Risk</th><th>Forecast end</th></tr></thead><tbody id="rows"></tbody></table></section></main>
+<footer class="muted">Demonstration only. Do not use confidential or unapproved data.</footer>
+<script>
+const projects=[
+["P-001","Customer Identity Modernization","Platform Team","On Track",72,"Medium","2027-02-28"],
+["P-002","Data Quality Enablement","Data Team","At Risk",48,"High","2027-01-31"],
+["P-003","Service Desk Automation","Operations","On Track",91,"Low","2026-12-15"],
+["P-004","Digital Onboarding MVP","Digital Team","Blocked",35,"High","2027-03-15"],
+["P-005","Reporting Platform Upgrade","BI Team","On Track",64,"Low","2027-01-20"],
+["P-006","Workflow Optimization","Automation Team","At Risk",57,"Medium","2027-02-10"]];
+const avg=Math.round(projects.reduce((s,p)=>s+p[4],0)/projects.length);
+const stats=[["Total initiatives",projects.length],["On track",projects.filter(p=>p[3]==="On Track").length],["At risk",projects.filter(p=>p[3]==="At Risk").length],["Average progress",avg+"%"]];
+document.querySelector("#metrics").innerHTML=stats.map(([k,v])=>`<article class="card"><div class="muted">${k}</div><div class="metric">${v}</div></article>`).join("");
+document.querySelector("#rows").innerHTML=projects.map(p=>`<tr><td><b>${p[1]}</b><div class="muted">${p[0]}</div></td><td>${p[2]}</td><td><span class="pill ${p[3]==="Blocked"?"bad":p[3]==="At Risk"?"warn":""}">${p[3]}</span></td><td>${p[4]}%<div class="bar"><span style="width:${p[4]}%"></span></div></td><td>${p[5]}</td><td>${p[6]}</td></tr>`).join("");
+</script></body></html>

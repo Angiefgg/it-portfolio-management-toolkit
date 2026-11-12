@@ -1,0 +1,3 @@
+ID,Type,Description,Owner,Impact,Probability,Mitigation,Due Date,Status
+R-001,Risk,External API readiness may delay integration,Technical Lead,High,Medium,Confirm contract and sandbox access,2026-12-05,Open
+D-001,Dependency,Security review required before production release,Security Lead,High,Medium,Book review during sprint planning,2026-12-12,In progress
